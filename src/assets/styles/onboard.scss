@@ -1,3 +1,250 @@
-.main {
-  background-color: antiquewhite;
+// $primary-purple: "#ga4ad1";
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+.parent-container {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f4f6f9;
+
+  .content-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    width: 60%;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      font-weight: bolder;
+      font-size: xx-large;
+      color: #40434a;
+
+      span {
+        padding-left: 4px;
+      }
+    }
+
+    .intro-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 30px;
+
+      .title {
+        font-weight: bold;
+        font-size: xx-large;
+        color: #40434a;
+      }
+
+      .subtitle {
+        color: #9ba0ab;
+        font-size: 18px;
+        padding-top: 12px;
+        font-weight: 600;
+      }
+
+      .icon-container {
+        height: 60px;
+        width: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #5a4ad1;
+        color: white;
+        border-radius: 50%;
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  justify-content: center;
+
+  label {
+    padding-top: 20px;
+    color: #40434a;
+    font-weight: 500;
+
+    span {
+      color: #9ba0ab;
+    }
+  }
+
+  input {
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #d3d3d3;
+    background-color: transparent;
+    font-size: 15px;
+    color: #9ba0ab;
+    font-weight: 600;
+  }
+
+  input:focus {
+    outline-color: #5a4ad1;
+    font-weight: 600;
+  }
+
+  input::placeholder {
+    color: #9ba0ab;
+    font-weight: 600;
+  }
+
+  button {
+    cursor: pointer;
+    margin-top: 25px;
+    padding: 14px 0;
+    background-color: #5a4ad1;
+    color: #f4f6f9;
+    border-radius: 5px;
+    border: none;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .input-adornment-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+    input {
+      margin: 0;
+      width: 100%;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+    }
+
+    .input-adornment {
+      border: 1px solid #d3d3d3;
+      padding: 12px 15px;
+      border-bottom-left-radius: 5px;
+      border-top-left-radius: 5px;
+      background-color: #e5e8f0;
+      color: #9ba0ab;
+      font-weight: bold;
+    }
+  }
+}
+
+.result-title {
+  padding-top: 10px;
+  span {
+    text-transform: capitalize;
+  }
+}
+
+.preference-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+
+  form {
+    display: flex;
+    justify-content: center;
+    width: 25vw;
+  }
+
+  .pref-option-container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    border: 1px solid #d3d3d3;
+    border-radius: 6px;
+    width: 33%;
+
+    .icon {
+      padding: 0 0 15px 0;
+      font-size: 26px;
+    }
+
+    .icon-active {
+      color: #5a4ad1;
+    }
+
+    .title {
+      font-weight: bold;
+      padding: 0 0 15px 0;
+      font-size: 17px;
+    }
+
+    .description {
+      color: #9ba0ab;
+      font-weight: 500;
+      font-size: 15px;
+    }
+  }
+
+  .options-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .pref-option-container-active {
+    border: 1px solid #5a4ad1;
+  }
+
+  .pref-option-container:hover {
+    border: 1px solid #5a4ad1;
+    .icon {
+      color: #5a4ad1;
+    }
+  }
+}
+
+.step-component-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//
+
+@media screen and (max-width: 480px) {
+  .parent-container {
+    .content-block {
+      width: 90%;
+    }
+  }
+
+  form {
+    width: 80vw;
+  }
+
+  .preference-container form {
+    width: 80vw;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1120px) {
+  .parent-container {
+    .content-block {
+      width: 90%;
+    }
+  }
+
+  form {
+    width: 60vw;
+  }
+
+  .preference-container form {
+    width: 50vw;
+  }
 }

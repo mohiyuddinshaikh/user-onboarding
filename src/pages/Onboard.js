@@ -1,17 +1,20 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment } from "../redux/reducers/userOnboardSlice";
 import "../assets/styles/onboard.scss";
+import Logo from "../assets/images/logo-2.png";
+import Stepper from "../components/stepper/Stepper";
+import ShowForm from "../components/onboard-form/ShowForm";
 
 export default function Onboard() {
-  const dispatch = useDispatch();
-
-  const user = useSelector((state) => state.user);
-  console.log("user", user);
-
   return (
-    <div className="main">
-      Onboard <button onClick={() => dispatch(increment())}>Inc</button>{" "}
+    <div className="parent-container">
+      <div className="content-block">
+        <div className="logo-container">
+          <img height="50px" width="50px" src={Logo} />
+          <span>Eden</span>
+        </div>
+        <Stepper />
+        <ShowForm />
+      </div>
     </div>
   );
 }
