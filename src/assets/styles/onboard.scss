@@ -218,6 +218,9 @@ form {
 
 @media screen and (max-width: 480px) {
   .parent-container {
+    -webkit-tap-highlight-color: transparent;
+    padding-bottom: 50px;
+
     .content-block {
       width: 90%;
     }
