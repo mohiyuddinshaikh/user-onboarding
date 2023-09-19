@@ -16,6 +16,7 @@ export default function Step(props) {
           "step-active": currentIndex <= activeStep,
           "step-inactive": currentIndex > activeStep,
         })}
+        data-testid={`stepper-${currentIndex}`}
       >
         {currentIndex}
       </div>
