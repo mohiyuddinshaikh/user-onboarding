@@ -61,11 +61,14 @@ export default function CollaboratePreference() {
                   isActive={isActive === index}
                   optionIndex={index}
                   handleSelect={handleSelect}
+                  key={index}
                 />
               );
             })}
           </div>
-          <button type="submit">Create Workspace</button>
+          <button type="submit" id="submit-button" disabled={isActive === null}>
+            Create Workspace
+          </button>
         </form>
       </div>
     </div>

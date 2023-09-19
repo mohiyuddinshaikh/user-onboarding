@@ -12,23 +12,18 @@ export default function ShowForm() {
     switch (activeStep) {
       case 1:
         return <Basic />;
-        break;
 
       case 2:
         return <Work />;
-        break;
 
       case 3:
         return <CollaboratePreference />;
-        break;
 
       case 4:
         return <Result />;
-        break;
 
       default:
         return <Basic />;
-        break;
     }
   };
 

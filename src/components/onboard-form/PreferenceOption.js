@@ -10,6 +10,8 @@ export default function PreferenceOption(props) {
         "pref-option-container-active": isActive,
       })}
       onClick={() => handleSelect(optionIndex)}
+      key={optionIndex}
+      data-testid={`preference-option-${optionIndex}`}
     >
       <div
         className={classNames("icon", {
